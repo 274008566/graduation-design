@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import './index.less'
 
-import FormControl from 'bee-form-control';
+// import FormControl from 'bee-form-control';
 import Navbar from 'bee-navbar';
 import 'bee-navbar/build/Navbar.css';
 const NavItem = Navbar.NavItem;
@@ -13,11 +13,9 @@ const Toggle = Navbar.Toggle;
 const Nav = Navbar.Nav;
 
 
-
-
 export default class Sidebar extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
         this.state = {
             expanded: false,
             selectedkey: 1
@@ -32,24 +30,18 @@ export default class Sidebar extends Component {
         this.setState({selectedkey: index});
     }
 
-
-  
     render() {
         return (
             <div className="container">
-                <Navbar
+                 <Navbar
                     inverse
-                    fixedTop={true}
                     expanded={this.state.expanded}
                     onToggle={this.onToggle}>
                     <Header>
                         <Brand>
-                        <img
-                            src={require("../../assets/images/logo.png")}
-                            style={{ cursor: "pointer" }}
-                            width={200}
-                            height={50}
-                        />
+                            <div className="logo">
+                                <img src = {require("../../assets/images/logo3.png")}/>
+                            </div>
                         </Brand>
                         <Toggle />
                     </Header>
@@ -58,15 +50,30 @@ export default class Sidebar extends Component {
                         <Nav
                             selectedkey={this.state.selectedkey}
                             onSelect={this.handleSelect}>
-                            <NavItem eventKey={1}>选项</NavItem>
+                            <NavItem eventKey={1}>首页</NavItem>
                             <NavItem href="#" eventKey={2}>
-                                选项
+                                关于
+                            </NavItem>
+                            <NavItem href="#" eventKey={2}>
+                                成长
+                            </NavItem>
+                            <NavItem href="#" eventKey={2}>
+                                学习
+                            </NavItem>
+                            <NavItem href="#" eventKey={2}>
+                                娱乐
+                            </NavItem>
+                            <NavItem href="#" eventKey={2}>
+                                求助
+                            </NavItem>
+                            <NavItem href="#" eventKey={2}>
+                                打赏
                             </NavItem>
                         </Nav>
                         
-                        <Navbar.Form pullRight>
+                        {/* <Navbar.Form pullRight>
                             <FormControl type="text" placeholder="Search"/>
-                        </Navbar.Form>
+                        </Navbar.Form> */}
                     </Collapse>
                 </Navbar>
             </div>
