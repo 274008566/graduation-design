@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.less'
-import Home from './routes/Home.js'
+import App from './routes/App.js'
 
 ReactDOM.render(
-    <Home/>,
+    <App/>,
     document.getElementById('root')
 )

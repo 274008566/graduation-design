@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-export class Home extends Component {
+export class Help extends Component {
     render() {
         return (
             <div>
-                首页
+                帮助
             </div>
         );
     }
 }
 
-export default Home;
+export default Help;

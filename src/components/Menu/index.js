@@ -50,23 +50,25 @@ export default class Sidebar extends Component {
                         <Nav
                             selectedkey={this.state.selectedkey}
                             onSelect={this.handleSelect}>
-                            <NavItem eventKey={1}>首页</NavItem>
-                            <NavItem href="#" eventKey={2}>
+                            <NavItem href="/#/" eventKey={1}>
+                                首页
+                            </NavItem>
+                            <NavItem href="/#/about" eventKey={2}>
                                 关于
                             </NavItem>
-                            <NavItem href="#" eventKey={2}>
+                            <NavItem href="/#/grow" eventKey={2}>
                                 成长
                             </NavItem>
-                            <NavItem href="#" eventKey={2}>
+                            <NavItem href="/#/study" eventKey={2}>
                                 学习
                             </NavItem>
-                            <NavItem href="#" eventKey={2}>
+                            <NavItem href="/#/amusement" eventKey={2}>
                                 娱乐
                             </NavItem>
-                            <NavItem href="#" eventKey={2}>
+                            <NavItem href="/#/help" eventKey={2}>
                                 求助
                             </NavItem>
-                            <NavItem href="#" eventKey={2}>
+                            <NavItem href="/#/reward" eventKey={2}>
                                 打赏
                             </NavItem>
                         </Nav>
