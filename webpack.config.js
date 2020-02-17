@@ -13,7 +13,7 @@ module.exports = {
     module:{
         rules:[
             {  
-                test: /\.(woff|eot|ttf|svg|png|jpg)$/,  
+                test: /\.(woff|eot|ttf|svg|png|jpg|gif)$/,  
                 use: [  
                     {  
                         loader: 'url-loader',  

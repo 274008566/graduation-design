@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Carousel from '../components/Carousel/index'
+import Content from '../module/Home/content/index'
 
 export class Home extends Component {
     render() {
         return (
-            <div>
-                首页
+            <div className="banner">
+                <Carousel/>
+                <Content/>
             </div>
         );
     }

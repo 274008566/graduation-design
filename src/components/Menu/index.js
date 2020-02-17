@@ -32,7 +32,7 @@ export default class Sidebar extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container-top">
                  <Navbar
                     inverse
                     expanded={this.state.expanded}
