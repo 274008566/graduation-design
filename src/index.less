@@ -12,9 +12,47 @@ body {
     font-size: 14px;
     font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 20px;
+    a{
+        color: #555;
+        text-decoration: none;
+    }
 }
-.banner{
+.container{
     max-width: 1200px;
     margin-top: 20px;
     margin-left: calc(50% - 600px);
+    .ant-layout{
+        .ant-layout{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            /* display: flex; */
+            -webkit-box-flex: 1;
+            -ms-flex: auto;
+            flex: auto;
+            -webkit-box-orient: vertical;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-height: 0;
+            background: #f0f2f5;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            box-sizing: border-box;
+            .ant-layout-content{
+                -webkit-box-flex: 1;
+                box-shadow: 0 1px 6px rgba(0,0,0,.2);
+                margin-right: 15px;
+
+
+            }
+            .ant-layout-sider{
+                width: 290px!important;
+                max-width: 290px!important;
+                min-width: 290px!important;
+                flex: 0 0 290px!important;
+            }
+        }
+    }
+    
 }

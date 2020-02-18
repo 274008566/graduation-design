@@ -24,7 +24,7 @@ class CarouselMent extends React.Component {
     }
 
     return(
-        <div className="carousel-demo-two">
+        <div className="carousel-demo-two" style={{marginBottom:15}}>
             <Carousel {...params}>
                 <div className="carousel-demo-1">
                     <img src={require('../../assets/images/banner0.png')}/>
