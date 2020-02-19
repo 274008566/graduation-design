@@ -6,9 +6,9 @@ import './index.less'
 export class Recommend extends Component {
     render() {
         return (
-            <div className="recommend">
+            <div className="recommend" >
                 <div className="title">
-                    <h3>特别推荐</h3>
+                    <h2>特别推荐</h2>
                 </div>
                 <Row>
                     <Col span={12}>
