@@ -11,6 +11,8 @@ const Brand = Navbar.Brand;
 const Collapse = Navbar.Collapse;
 const Toggle = Navbar.Toggle;
 const Nav = Navbar.Nav;
+import { BackTop } from 'antd';
+
 
 
 export default class Sidebar extends Component {
@@ -78,6 +80,9 @@ export default class Sidebar extends Component {
                         </Navbar.Form> */}
                     </Collapse>
                 </Navbar>
+                <BackTop>
+                    <div className="ant-back-top-inner">UP</div>
+                </BackTop>
             </div>
         )
     }

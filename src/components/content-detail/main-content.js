@@ -13,7 +13,12 @@ export class MainContent extends Component {
                     <span>2018-11-08</span>
                     <span>6650人已围观</span>
                 </div>
-                
+                <div className="summary">
+                    <span>
+                        <strong>摘要：</strong>
+                        很多人把感恩当成一种付出，其实感恩本身就是一种幸福。
+                    </span>
+                </div>
             </div>
         );
     }
