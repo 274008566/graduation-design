@@ -8,6 +8,7 @@ import Amusement from './routes/Amusement'
 import Help from './routes/Help'
 import Reward from './routes/Reward'
 import Study from './routes/Study'
+import ContentDetail from './components/content-detail/index'
 
 const RouterConfig = ()=>{
 
@@ -20,6 +21,8 @@ const RouterConfig = ()=>{
             <Route  path="/reward" component={Reward}/>
             <Route  path="/study" component={Study}/>
             <Route  path="/amusement" component={Amusement}/>
+            <Route  path="/home/detail/:id" component={ContentDetail}/>
+
         </HashRouter>
     )
 }

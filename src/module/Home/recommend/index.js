@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Row, Col } from 'antd';
 import RecommendCard from './recommend-card'
 import './index.less'
@@ -12,7 +13,9 @@ export class Recommend extends Component {
                 </div>
                 <Row>
                     <Col span={12}>
-                        <RecommendCard/>
+                        <Link to={{pathname: `home/detail/${1}`}}>
+                            <RecommendCard/>
+                        </Link>
                     </Col>
                     <Col span={12}>
                         <RecommendCard/>

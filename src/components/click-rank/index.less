@@ -1,0 +1,127 @@
+.click-rank:hover {
+    .htitle::after{
+        width: 80px;
+    }
+}
+.click-rank{
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    ul{
+        overflow: hidden;
+        li:nth-child(even) {
+            background: #f6f6f6;
+        }
+        li:nth-child(3) {
+            i{
+                background: #FF6600;
+            }
+            
+        }
+        li:first-child{
+            i{
+                background: #FF6600;
+            }
+        }
+        li:nth-child(2){
+            i{
+                background: #FF6600;
+            }
+        }
+        li{
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+           
+            i{
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: #B1B1B1;
+                float: left;
+                margin-top: 8px;
+                margin-right: 10px;
+                position: relative;
+                font-style: normal;
+            }
+            i::before{
+                content: attr(data-key);
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 9px;
+                color: #fff;
+                line-height: 16px;
+                width: 16px;
+                text-align: center;
+            }
+        }
+    }
+    .htitle{
+        font-size: 16px;
+        line-height: 40px;
+        border-bottom: 1px solid #eee;
+        color: #484848;
+        font-weight: normal;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .htitle::after{
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 2px;
+        content: "";
+        background: #000;
+        left: 0;
+        bottom: 0;
+        -moz-transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+    .topnews:hover img {
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
+   
+    .topnews{
+        display: block;
+        margin: 20px 0;
+        background: #000;
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
+        max-height: 110px;
+        img{
+            opacity: 0.7;
+            transition: all 0.5s;
+            width: 100%;
+            border: 0;
+            display: block;
+        }
+        span {
+            bottom: 0;
+            position: absolute;
+            bottom: 30%;
+            left: 0;
+            right: 0;
+            color: #FFF;
+            text-align: center;
+            font-size: 15px;
+            padding: 0 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-height: 22px;
+        }
+    }
+}

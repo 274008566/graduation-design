@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 import Recommend from '../module/Home/recommend/index'
 import NewPublish from '../module/Home/new-publish';
 import HotTag from '../components/hot-tag';
+import ClickRank from '../components/click-rank'
 import { Article } from '../components/commend-article';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -20,8 +21,9 @@ export class Home extends Component {
                         <NewPublish/>
                     </Content>
                     <Sider>
-                        <HotTag/>
+                        <ClickRank/>
                         <Article/>
+                        <HotTag/>
                     </Sider>
                 </Layout>
                 <Footer>Footer</Footer>
