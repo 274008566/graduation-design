@@ -8,7 +8,9 @@ export class BreadCrump extends Component {
     render() {
         return (
             <div>
+                
                 <Breadcrumb>
+                    当前位置：
                     <Breadcrumb.Item href="#">
                         <Icon type="uf-home"></Icon>
                         <span>Home</span>

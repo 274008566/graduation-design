@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 import BreadCrump from '../bread-crump';
+import MainContent from './main-content';
+import './index.less'
+
 
 const { Footer, Sider, Content } = Layout;
-
 
 export class ContentDetail extends Component {
     render() {
@@ -13,6 +15,7 @@ export class ContentDetail extends Component {
                     <Layout>
                         <Content>
                             <BreadCrump/>
+                            <MainContent/>
                         </Content>
                         <Sider>
                         Footer
