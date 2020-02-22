@@ -3,6 +3,8 @@ import { Layout } from 'antd';
 import BreadCrump from '../bread-crump';
 import MainContent from './main-content';
 import './index.less'
+import ClickRank from '../click-rank';
+import Like from '../like';
 
 
 const { Footer, Sider, Content } = Layout;
@@ -18,7 +20,8 @@ export class ContentDetail extends Component {
                             <MainContent/>
                         </Content>
                         <Sider>
-                        Footer
+                            <ClickRank/>
+                            <Like/>
                         </Sider>
                     </Layout>
                     <Footer>Footer</Footer>
