@@ -11,7 +11,7 @@ export class PublishCard extends Component {
         }
     }
     render() {
-        let {key} = this.props
+        let {index} = this.props
         return (
             <div className="publish-card">
                 <figure>
@@ -20,10 +20,10 @@ export class PublishCard extends Component {
                     </a>
                 </figure>
                 <ul>
-                    <h3><a href={`#/home/detail/${key}`} title="给王先生的一封情书" >给王先生的一封情书</a></h3>
+                    <h3><a href={`#/home/detail/${index}`} title="给王先生的一封情书" >给王先生的一封情书</a></h3>
                     <p>和王先生在一起已经十个年头。2010年确立恋爱关系2012年开启北漂生涯2016年领证结婚，迈入婚姻殿堂2018年有了豌豆豆2019年辞职在家育儿在这十年期间，每个情人
                     和王先生在一起已经十个年头。2010年确立恋爱关系2012年开启北漂生涯2016年领证结婚，迈入婚姻殿堂2018年有了豌豆豆2019年辞职在家育儿在这十年期间，每个情人...
-                        <a href={`#/home/detail/${key}`} className="detail">[详情]</a>
+                        <a href={`#/home/detail/${index}`} className="detail">[详情]</a>
                     </p>
                     <p className="autor">
                         <span>

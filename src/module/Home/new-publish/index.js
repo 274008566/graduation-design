@@ -20,7 +20,7 @@ export class NewPublish extends Component {
                 {
                     arr.map((item,index)=>{
                         return (
-                            <PublishCard item={item} key={index}/>
+                            <PublishCard item={item} key={index} index={index}/>
                         )
                     })
                 }

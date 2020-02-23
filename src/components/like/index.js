@@ -27,9 +27,9 @@ export class Like extends Component {
                     {
                         [1,2,3,4,5].map((item,index)=>{
                             return(
-                                <li onMouseOver={this.changeKey(index)}  className={classnames({active:activekey==index})}>
+                                <li onMouseOver={this.changeKey(index)}  className={classnames({active:activekey==index})} key={index}>
                                     <i data-key={index+1}></i>
-                                    <a  title="十条设计原则教你学会如何设计网页布局!" target="_blank">十条设计原则教你学会如何设计网页布局!</a>
+                                    <a href={`#/home/detail/${index}`}  title="十条设计原则教你学会如何设计网页布局!">十条设计原则教你学会如何设计网页布局!</a>
                                 </li>
                             )
                         })
