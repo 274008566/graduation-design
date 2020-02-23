@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.less'
 import PublishCard from './publish-card'
 
+
 export class NewPublish extends Component {
     constructor(){
         super()
@@ -18,7 +19,9 @@ export class NewPublish extends Component {
                 </div>
                 {
                     arr.map((item,index)=>{
-                        return <PublishCard item={item} key={index}/>
+                        return (
+                            <PublishCard item={item} key={index}/>
+                        )
                     })
                 }
             </div>
