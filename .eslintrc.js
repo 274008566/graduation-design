@@ -20,10 +20,10 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "indent": [
-            "error",
-            4
-        ],
+        // "indent": [
+        //     "error",
+        //     4
+        // ],
         "linebreak-style": [
             0,"error", "windows"
         ],

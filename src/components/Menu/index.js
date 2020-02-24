@@ -55,9 +55,6 @@ export default class Sidebar extends Component {
                             <NavItem href="/#/" eventKey={1}>
                                 首页
                             </NavItem>
-                            <NavItem href="/#/about" eventKey={2}>
-                                关于
-                            </NavItem>
                             <NavItem href="/#/grow" eventKey={2}>
                                 成长
                             </NavItem>
@@ -72,6 +69,9 @@ export default class Sidebar extends Component {
                             </NavItem>
                             <NavItem href="/#/reward" eventKey={2}>
                                 打赏
+                            </NavItem>
+                            <NavItem href="/#/about" eventKey={2}>
+                                关于
                             </NavItem>
                         </Nav>
                         
