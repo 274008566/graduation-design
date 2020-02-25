@@ -58,20 +58,20 @@ export default class Sidebar extends Component {
                             <NavItem href="/#/grow" eventKey={2}>
                                 成长
                             </NavItem>
-                            <NavItem href="/#/study" eventKey={2}>
+                            <NavItem href="/#/study" eventKey={3}>
                                 学习
                             </NavItem>
-                            <NavItem href="/#/amusement" eventKey={2}>
+                            <NavItem href="/#/amusement" eventKey={4}>
                                 娱乐
                             </NavItem>
-                            <NavItem href="/#/help" eventKey={2}>
+                            <NavItem href="/#/help" eventKey={5}>
                                 求助
                             </NavItem>
-                            <NavItem href="/#/reward" eventKey={2}>
-                                打赏
+                            <NavItem href="/#/message" eventKey={6}>
+                                留言板
                             </NavItem>
-                            <NavItem href="/#/about" eventKey={2}>
-                                关于
+                            <NavItem href="/#/about" eventKey={7}>
+                                关于我
                             </NavItem>
                         </Nav>
                         
