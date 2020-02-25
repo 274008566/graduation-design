@@ -11,6 +11,7 @@ export class Message extends Component {
                     <h1 >留言板</h1>
                     <span className="title1">海内存知己，天涯若比邻。</span>
                     <Markdown markup={ markdown } />
+                    
                 </div>
             </div>
         );
