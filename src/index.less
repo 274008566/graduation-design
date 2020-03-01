@@ -130,13 +130,33 @@ body {
     
 }
 .study{
-    
+    margin: 0 10%;
+    overflow: auto;
+    min-height: calc(~"100vh - 55px");
+    background: #fff;
+    padding: 10px;
+    .header-button{
+        margin: 20px 0;
+    height: 42px;
+    padding: 4px 30px;
+    }
+    .create{
+        position: relative;
+        top: -12px;
+        margin-left: 20px;
+        color: #fff;
+        background: #6bc30d;
+    }
+    .create:hover{
+        background: linear-gradient(45deg,#6bc30d,#aeec6c);
+        color: #fff;
+    }
     .buttonGroup {
         display: inline-block;
         border: 1px solid #40465b;
         border-radius: 50px;
         overflow: hidden;
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
     
         & > .u-button {
           background-color: #fff;
@@ -177,11 +197,11 @@ body {
         margin-left: 10px;
         color: rgba(215,215,215,1) ;
         position: relative;
-        top: 3px;
+        top: -6px;
         .cl-style-table{
           border-right: 1px solid #d7d7d7;
           cursor: pointer;
-          font-size: 16px;
+          font-size: 25px;
           color: rgba(215,215,215,1);
           padding: 5px 10px;
         }
@@ -189,17 +209,15 @@ body {
         .cl-style-card{
           border-left: 1px solid #d7d7d7;
           cursor: pointer;
-          font-size: 16px;
+          font-size: 25px;
           color: rgba(215,215,215,1);
           padding: 5px 10px;
           margin-right: 5px;
         }
         .active-view{
-          color: rgba(229,57,53,1);
-          // padding: 6px 10px;
+          color: #6bc30d;
           border-radius: 5px;
           border: 0;
-          // background-color: #dee9f4;
         }
     }
 }

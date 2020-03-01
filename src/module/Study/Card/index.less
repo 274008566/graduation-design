@@ -1,0 +1,103 @@
+.study-card{
+    height: 160px;
+    background:#fff;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px 0 #dee9f4;
+    ul{
+        width: 100%;
+        float: left;
+        border-top: 1px solid #e6e6e6;
+        display: block;
+        li{
+            float: left;
+            width: 49.5%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #9b9b9b;
+            vertical-align: baseline;
+            cursor: pointer;
+        }
+        li:not(:last-child) {
+            border-right: 1px solid #e6e6e6;
+        }
+    }
+    .app-manager-tile-header{
+        cursor: pointer;
+        background: url('../../../assets/images/card.png') no-repeat 100%;
+        background-size: cover;
+        height: 120px;
+        width: 100%;
+        color: #fff;
+        .desc {
+            position: absolute;
+            top: 65px;
+            left: 115px;
+            padding: 0;
+            i{
+                margin-right: 5px;
+            }
+        }
+        .app-manager-tile-header-title {
+            position: absolute;
+            top: 24px;
+            height: 24px;
+            line-height: 20px;
+            display: inline-block;
+            max-width: 160px;
+            font-size: 18px;
+            font-weight: 300;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: #fff;
+        }
+        
+        .app-manager-tile-header-cage{
+            display: inline-block;
+            margin: 15px 16px;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 1000px;
+            background-color: hsla(0,0%,93%,.5);
+            border: 5px solid transparent;
+            .default-png {
+                background: url('../../../assets/images/card-logo.png');
+                background-size: cover;
+            }
+            .app-manager-tile-header-cage-img{
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 1000px;
+                background-color: #fff;
+                
+            }
+        }
+    }
+    .env{
+        background: rgb(184, 109, 0);
+        position: absolute;
+        right: -1px;
+        top: 10px;
+        height: 20px;
+        width: 60px;
+        color: #fff;
+        line-height: 20px;
+        text-align: center;
+        background-size: cover;
+        -webkit-box-shadow: -1px 1px 2px 0 #aaa;
+        box-shadow: -1px 1px 2px 0 #aaa;
+        .env-corner {
+            bottom: -7px;
+            position: absolute;
+            right: 0;
+            border-style: solid;
+            border-bottom-width: 6px;
+            border-left-width: 12px;
+            border-color: rgb(184, 109, 0) transparent transparent rgb(184, 109, 0);
+        }
+    }
+}
