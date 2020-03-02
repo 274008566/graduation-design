@@ -21,10 +21,10 @@ export class StudyCard extends Component {
                     </div>
                 </div>
                 <ul>
-                    <li class="group-control-item">
+                    <li className="group-control-item">
                         删除
                     </li>
-                    <li class="group-control-item">
+                    <li className="group-control-item">
                        查看详情
                     </li>
                 </ul>

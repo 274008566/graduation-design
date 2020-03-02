@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+import GrowTabs from '../module/Grow/Tabs'
+
 export class Grow extends Component {
     render() {
         return (
-            <div>
-                成长
+            <div className="grow">
+                <GrowTabs/>
             </div>
         );
     }

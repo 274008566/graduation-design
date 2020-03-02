@@ -42,6 +42,7 @@
     "bee-layout": "^1.2.7",
     "bee-modal": "^2.1.9",
     "bee-navbar": "^2.0.0",
+    "bee-tabs": "^2.1.6",
     "bee-timeline": "^2.0.1",
     "classnames": "^2.2.6",
     "gg-editor": "^3.0.5",

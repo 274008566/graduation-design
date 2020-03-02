@@ -4,7 +4,7 @@ export class Emojis extends Component {
     render() {
         return (
             <div>
-                <ul class="bf-emojis">
+                <ul className="bf-emojis">
                         <li data-emoji="🤣">🤣</li>
                         <li data-emoji="🙌">🙌</li>
                         <li data-emoji="💚">💚</li>
