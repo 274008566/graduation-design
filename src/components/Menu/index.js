@@ -61,8 +61,8 @@ export default class Sidebar extends Component {
                             <NavItem href="/#/study" eventKey={3}>
                                 学习
                             </NavItem>
-                            <NavItem href="/#/amusement" eventKey={4}>
-                                娱乐
+                            <NavItem href="/#/technology" eventKey={4}>
+                                技术分享
                             </NavItem>
                             <NavItem href="/#/help" eventKey={5}>
                                 求助

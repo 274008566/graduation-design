@@ -4,7 +4,7 @@ import {Route,HashRouter} from 'react-router-dom'
 import Home from './routes/Home.js'
 import About from './routes/About'
 import Grow from './routes/Grow'
-import Amusement from './routes/Amusement'
+import Technology from './routes/Technology'
 import Help from './routes/Help'
 import Message from './routes/Message'
 import Study from './routes/Study'
@@ -22,7 +22,7 @@ const RouterConfig = ()=>{
                 <Route  path="/grow" component={Grow}/>
                 <Route  path="/message" component={Message}/>
                 <Route  path="/study" component={Study}/>
-                <Route  path="/amusement" component={Amusement}/>
+                <Route  path="/technology" component={Technology}/>
                 <Route  path="/home/detail/:id" component={ContentDetail}/>
             </ScrollToTop>
         </HashRouter>

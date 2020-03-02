@@ -17,7 +17,7 @@ export class StudyCard extends Component {
                     <h4 className="app-manager-tile-header-title" style={{lineHeight: "normal"}}>DC-fe-前端fe-core</h4>
                     <div className="desc">
                         <Icon type="uf-time-c-o" />
-                        <span className="time"><i class="cl cl-time-02"></i>2020-01-10 10:07:49</span>
+                        <span className="time">2020-01-10 10:07:49</span>
                     </div>
                 </div>
                 <ul>

@@ -30,7 +30,7 @@ export class TimeLines extends Component {
                             return (
                                 <Timeline.Item  key={index} >
                                     <Link to={{pathname: `home/detail/${index}`}}>
-                                        <div className="title">
+                                        <div className="grow-title">
                                             {item.item}
                                         </div>
                                     </Link>
