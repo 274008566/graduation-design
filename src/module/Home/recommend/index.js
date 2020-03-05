@@ -4,12 +4,20 @@ import { Row, Col } from 'antd';
 import RecommendCard from './recommend-card'
 import './index.less'
 
+let {getSidebarList} = require('../server')
+
 export class Recommend extends Component {
     constructor(){
         super()
         this.state = {
             recommendList:[1,2,3,4,5,6]
         }
+    }
+
+    componentDidMount(){
+        getSidebarList().then(res=>{
+            console.log(res)
+        })
     }
     render() {
         let {recommendList} = this.state

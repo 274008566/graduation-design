@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "antd": "^3.26.11",
+    "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "bee-breadcrumb": "^2.0.1",
     "bee-button": "^2.0.11",
