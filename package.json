@@ -47,6 +47,7 @@
     "bee-timeline": "^2.0.1",
     "classnames": "^2.2.6",
     "gg-editor": "^3.0.5",
+    "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",

@@ -14,10 +14,14 @@ export class BreadCrump extends Component {
                         <Icon type="uf-home"></Icon>
                         <span>首页</span>
                     </Breadcrumb.Item>
-                    <Breadcrumb.Item href="#">
-                        <Icon type="uf-caven"></Icon>
-                        <span>Library</span>
-                    </Breadcrumb.Item>
+                    {
+                        this.props.type == "grow" ? 
+                        <Breadcrumb.Item href="#">
+                            <Icon type="uf-caven"></Icon>
+                            <span>成长</span>
+                        </Breadcrumb.Item>
+                        :null
+                    }
                     <Breadcrumb.Item active>
                         <Icon type="uf-book"></Icon>
                         <span>正文</span>

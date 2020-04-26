@@ -22,8 +22,8 @@ export class GrowTabs extends Component {
     getSidebarList=()=>{
         let {activeKey} = this.state;
         getSidebarList(activeKey).then(res=>{
-            console.log(res)
-            let data = res.data;
+            let data = res.data.data;
+            console.log(data)
             this.setState({
                 growList:data
             })
@@ -32,7 +32,6 @@ export class GrowTabs extends Component {
 
 
     onChange = (activeKey) => {
-        console.log(`onChange ${activeKey}o-^-o`);
         this.setState({
             activeKey,
         },()=>{

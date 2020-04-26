@@ -1,11 +1,15 @@
 import axios from "axios"; //导入axios
 
 const url = {
-    getGrowList:'/grow/get-list'
+    getGrowList:'/api/api/v1/grow-list',
+    getGrowDetail:'/api/api/v1/grow'
 }
 
 
-export function getSidebarList (time) {
-  return axios.get(`/api${url.getGrowList}?id=${time}`);
+export function getSidebarList (id) {
+  return axios.get(`${url.getGrowList}?time=${id}`);
 }
- 
+
+export function getGrowDetail (id) {
+  return axios.get(`${url.getGrowDetail}?id=${id}`);
+}

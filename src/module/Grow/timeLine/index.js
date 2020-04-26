@@ -17,9 +17,9 @@ export class TimeLines extends Component {
                         growList.map((item,index)=>{
                             return (
                                 <Timeline.Item  key={index} >
-                                    <Link to={{pathname: `home/detail/${index}`}}>
+                                    <Link to={{pathname: `home/detail/${item.id}`,search:`?type=grow`}}>
                                         <div className="grow-title">
-                                            {item.Gtitle}
+                                            {item.title}
                                         </div>
                                     </Link>
                                 </Timeline.Item>
