@@ -7,15 +7,13 @@ import 'bee-icon/build/Icon.css';
 
 export class StudyCard extends Component {
 
-    go = (id)=>()=>{
-        this.props.history.push('/flow/'+id)
-    }
+   
     render() {
         let {item}=this.props
         console.log(item)
         return (
             <div className="study-card">
-               <div className="env" >思维导图
+               <div className="env" >流程图
                     <div className="env-corner"></div>
                </div>
                <div className="app-manager-tile-header tile-app tile-false">

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Timeline from 'bee-timeline';
 import 'bee-timeline/build/Timeline.css';
+import Title from '../components/Title/index'
 
 export class About extends Component {
     constructor(){
@@ -31,6 +32,8 @@ export class About extends Component {
         })
         return (
             <div className="about">
+                <Title name='关于' href="#/about"/>
+                
                 <div className='about-content'>
                     <h2>关于本站</h2>
                     <span className="first">本网站创建于2019年12月30日，用于记录与分享个人学习心得。</span>
