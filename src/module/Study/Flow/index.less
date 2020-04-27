@@ -1,0 +1,43 @@
+
+.editor {
+    margin: 0 10%;
+    overflow: auto;
+    min-height: calc(100vh - 55px);
+    background: #fff;
+    padding: 10px;
+  }
+
+  .graph-container{
+      border:1px solid #e6e9ed;
+    canvas{
+        min-height: calc(100vh - 150px);
+
+    }
+  }
+  
+  
+  .editorSidebar,
+  .editorContent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .editorSidebar {
+    background: #fafafa;
+    min-height: 400px;
+  
+    &:first-child {
+      border-right: 1px solid #e6e9ed;
+    }
+  
+    &:last-child {
+      border-left: 1px solid #e6e9ed;
+    }
+  }
+  
+  .flow,
+  .mind,
+  .koni {
+    flex: 1;
+  }
+  

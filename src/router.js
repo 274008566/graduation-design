@@ -10,6 +10,7 @@ import Message from './routes/Message'
 import Study from './routes/Study'
 import ContentDetail from './components/content-detail/index'
 import ScrollToTop from './components/scroll-top'
+import Flow from './module/Study/Flow/index'
 
 const RouterConfig = ()=>{
 
@@ -24,6 +25,7 @@ const RouterConfig = ()=>{
                 <Route  path="/study" component={Study}/>
                 <Route  path="/technology" component={Technology}/>
                 <Route  path="/home/detail/:id" component={ContentDetail}/>
+                <Route  path="/flow/:id" component={Flow}/>
             </ScrollToTop>
         </HashRouter>
     )

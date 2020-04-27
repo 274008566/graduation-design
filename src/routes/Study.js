@@ -6,8 +6,8 @@ import 'bee-button/build/Button.css';
 import StudyCard from '../module/Study/Card/index';
 import { Col, Row } from 'bee-layout';
 import 'bee-layout/build/Layout.css';
+import {getList}from '../module/Study/server'
 
-import CreateModal from '../module/Study/create-modal/index'
 const btnName = [
     {
         id: 'cd',
@@ -25,13 +25,20 @@ export class Study extends Component {
         this.state = {
             showType:"cd",
             showCList:false,
-            createModal:false
+            createModal:false,
+            chainList:[]
         }
     }
 
-    createModal = (val)=>() =>{
-        this.setState({
-            createModal:val
+    componentDidMount(){
+        getList().then(res=>{
+            let data = res.data
+            console.log(data)
+            if(data.code==200){
+                this.setState({
+                    chainList:data.data
+                })
+            }
         })
     }
 
@@ -50,7 +57,7 @@ export class Study extends Component {
         });
     }
     render() {
-        let {showType,createModal}= this.state
+        let {showType, chainList}= this.state
         return (
             <div className="study">
                 <div className="header-button">
@@ -70,7 +77,7 @@ export class Study extends Component {
                         }
                         
                     </div>
-                    <Button bordered className="create" onClick={this.createModal(true)}>创建脑图</Button>
+                    {/* <Button bordered className="create" onClick={this.createModal(true)}>创建脑图</Button> */}
                     <span className="change-view">
                         <Icon type="uf-symlist" className={this.state.showCList ? 'cl cl-style-table  active-view' : 'cl cl-style-table '}
                             onClick={this.changeView('list')} title="列表视图"/>
@@ -80,19 +87,19 @@ export class Study extends Component {
                 </div>
                 <div className="study-content">
                     {
-                        [1,2,3,4,5,6].map((item,index)=>{
+                        chainList.map((item,index)=>{
                             return (
                                 <Col md={6} xs={12} sm={12} lg={4} key={index}>
-                                     <StudyCard />
+                                     <StudyCard item={item} />
                                 </Col>
                             )
                         })
                     }
                 </div>
-                <CreateModal
+                {/* <CreateModal
                 show={createModal}
                 showModal={this.createModal}
-                />
+                /> */}
             </div>
         );
     }
