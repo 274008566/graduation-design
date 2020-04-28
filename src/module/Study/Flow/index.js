@@ -21,7 +21,6 @@ class FlowDemo extends Component {
     componentDidMount(){
         let location = this.props.history.location
         let id = location.pathname.split("w/")[1]
-        console.log(id)
         this.getDetail(id)
     }
 

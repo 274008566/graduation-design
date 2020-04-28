@@ -23,7 +23,6 @@ export class GrowTabs extends Component {
         let {activeKey} = this.state;
         getSidebarList(activeKey).then(res=>{
             let data = res.data.data;
-            console.log(data)
             this.setState({
                 growList:data
             })

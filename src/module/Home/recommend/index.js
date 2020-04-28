@@ -4,23 +4,28 @@ import { Row, Col } from 'antd';
 import RecommendCard from './recommend-card'
 import './index.less'
 
-let {getSidebarList} = require('../server')
+
 
 export class Recommend extends Component {
     constructor(){
         super()
         this.state = {
-            recommendList:[1,2,3,4,5,6]
+            RecommendList:[]
         }
     }
 
-    componentDidMount(){
-        getSidebarList().then(res=>{
-            console.log(res)
-        })
+    componentWillReceiveProps(nextProps){
+        let {RecommendList}=nextProps
+
+        if(RecommendList.length!=this.props.RecommendList.length){
+            this.setState({
+                RecommendList
+            })
+        }
     }
+
     render() {
-        let {recommendList} = this.state
+        let { RecommendList} = this.state
         return (
             <div className="recommend" >
                 <div className="title">
@@ -28,11 +33,11 @@ export class Recommend extends Component {
                 </div>
                 <Row>
                     {
-                        recommendList.map((item,index)=>{
+                        RecommendList.map((item,index)=>{
                             return (
                             <Col span={12} key={index}>
-                                <Link to={{pathname: `home/detail/${index}`}}>
-                                    <RecommendCard/>
+                                <Link to={{pathname: `home/detail/${item.id}`,search:`?type=article`}}>
+                                    <RecommendCard item={item}/>
                                 </Link>
                             </Col>
                             )

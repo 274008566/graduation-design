@@ -10,7 +10,6 @@ export class StudyCard extends Component {
    
     render() {
         let {item}=this.props
-        console.log(item)
         return (
             <div className="study-card">
                <div className="env" >流程图

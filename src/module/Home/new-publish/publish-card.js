@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import './index.less'
 import Icon from 'bee-icon';
 import 'bee-icon/build/Icon.css';
+import axios from "axios"; //导入axios
+// import {updataArticle} from '../server'
 
 export class PublishCard extends Component {
     constructor(){
@@ -10,34 +14,59 @@ export class PublishCard extends Component {
 
         }
     }
+    
+     componentDidMount(){
+        let {item} = this.props
+        this.getTxt(item)()
+     }
+     
+    getTxt = (item)=>() =>{
+        let content = item.content
+        let url = content.split('3001')[1]
+        axios(url).then(res=>{
+            let data = res.data
+            this.setState({
+                dataTxt:data
+            })
+        })
+    }
+
     render() {
-        let {index} = this.props
+        let {item} = this.props
+        
+        let {dataTxt}=this.state
+        // let dataTxt = this.getTxt(item)()
+        // console.log(dataTxt)
+
         return (
             <div className="publish-card">
                 <figure>
                     <a title="给王先生的一封情书" >
-                        <img src={require('../../../assets/images/publish1.jpg')} original="#"  alt="给王先生的一封情书"/>
+                        <img src={item.img} original="#"  alt="给王先生的一封情书"/>
                     </a>
                 </figure>
                 <ul>
-                    <h3><a href={`#/home/detail/${index}`} title="给王先生的一封情书" >给王先生的一封情书</a></h3>
-                    <p>和王先生在一起已经十个年头。2010年确立恋爱关系2012年开启北漂生涯2016年领证结婚，迈入婚姻殿堂2018年有了豌豆豆2019年辞职在家育儿在这十年期间，每个情人
-                    和王先生在一起已经十个年头。2010年确立恋爱关系2012年开启北漂生涯2016年领证结婚，迈入婚姻殿堂2018年有了豌豆豆2019年辞职在家育儿在这十年期间，每个情人...
-                        <a href={`#/home/detail/${index}`} className="detail">[详情]</a>
+                    <Link to={{pathname: `home/detail/${item.id}`,search:`?type=article`}} >
+                        <h3 >{item.title}</h3>
+                    </Link>
+                    
+                    <p className="data-text">{dataTxt}
+                        
                     </p>
+                    {/* <a href={`#/home/detail/${index}`} className="detail">[详情]</a> */}
                     <p className="autor">
                         <span>
-                            <Icon type="uf-caven" style={{color: "#f891b7"}} /><a >韶华追忆</a>
+                            <Icon type="uf-caven" style={{color: "#f891b7"}} /><a>最新推荐</a>
                         </span>
                         <span>
-                            <Icon type="uf-time-c-o" style={{color: "#91c8f8"}} /><a >2017-10-14</a>
+                            <Icon type="uf-time-c-o" style={{color: "#91c8f8"}} /><a >{item.createdAt}</a>
                         </span>
                         <span className="good">
-                            <Icon type="uf-eye" style={{color: "#759b08"}} /><a>1577次浏览</a>
+                        <Icon type="uf-eye" style={{color: "#759b08"}} /><a>{item.click_num}次浏览</a>
                         </span>
-                        <span className="good">
+                        {/* <span className="good">
                             <Icon type="uf-caven" /><a >韶华追忆</a>
-                        </span>
+                        </span> */}
                     </p>
                 </ul>
             </div>
