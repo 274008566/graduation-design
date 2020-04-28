@@ -1,40 +1,52 @@
 import React, { Component } from 'react';
 import './index.less'
-import { Link } from 'react-router-dom';
+import {getArticleDetail, getArticleList} from '../../module/Home/server'
 
 
 export class Article extends Component {
     constructor(){
         super()
         this.state = {
-            articleList:[1,2,3,4]
+            ArticleList:[]
         }
     }
+
+    componentDidMount(){
+        getArticleList().then(res=>{
+            let data = res.data
+            if(data.code==200){
+                this.setState({
+                    ArticleList:data.data
+                })
+            }
+        })
+    }
     render() {
-        let articleList =this.state.articleList
+        let articleList =this.state.ArticleList
+        let newArticleList = articleList.filter(item=>item.sort_id=="recommend")
         return (
             <div className="hot-article">
                 <div className="title"><h3>推荐文章</h3></div>
                 <div className="content">
                     <ul>
                         {
-                            articleList.map((item,index)=>{
+                            newArticleList.map((item,index)=>{
                                 return (
-                                    <Link to={{pathname: `home/detail/${index}`}} key={index}>
+                                    <a href={`#/home/detail/${item.id}?type=article`} title={item.title} target="_blank" key={index}>
                                         <li>
                                                 <span className="thumbnail">
-                                                    <img src={require("../../assets/images/logo1.png")}/>
+                                                    <img src={item.img}/>
                                                 </span>
                                                 <span className="muted">
-                                                    <span className="text">vue+echarts 动态绘制图表以及异步加载数据</span>
+                                                <span className="text">{item.title}</span>
                                                     <span className="data">
-                                                        <span className="left">2017-12-06</span>
-                                                        <span style={{color: "#999"}}>3187次阅读</span>
+                                                        <span className="left">{item.createdAt}</span>
+                                                        <span style={{color: "#999"}}>{item.click_num}次阅读</span>
                                                     </span>
                                                     
                                                 </span>
                                         </li>
-                                    </Link>
+                                    </a>
                                     
                                 )
                             })

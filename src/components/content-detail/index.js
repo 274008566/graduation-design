@@ -3,9 +3,11 @@ import { Layout } from 'antd';
 import BreadCrump from '../bread-crump';
 import MainContent from './main-content';
 import './index.less'
-import ClickRank from '../click-rank';
+import Article from '../commend-article/index'
 import Like from '../like';
 import axios from "axios"; //导入axios
+import Loading from 'bee-loading';
+import 'bee-loading/build/Loading.css';
 
 
 import {getGrowDetail} from '../../module/Grow/server'
@@ -13,14 +15,15 @@ import {getArticleDetail} from '../../module/Home/server'
 import {updataArticle} from '../../module/Home/server'
 
 
-const { Footer, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 export class ContentDetail extends Component {
     constructor(){
         super();
         this.state = {
             detail:[],
-            dataTxt:''
+            dataTxt:'',
+            showRotate:false
         }
     }
 
@@ -37,9 +40,15 @@ export class ContentDetail extends Component {
         
         let type = search.split("=")[1]
         this.setState({type})
+        this.setState({
+            showRotate:true
+        })
         if(type=='grow'){
             getGrowDetail(id).then(res=>{
                 let data = res.data
+                this.setState({
+                    showRotate:false
+                })
                 if(data.code==200){
                     this.setState({
                         detail:data.data
@@ -55,6 +64,9 @@ export class ContentDetail extends Component {
         }else{
             getArticleDetail(id).then(res=>{
                 let data = res.data
+                this.setState({
+                    showRotate:false
+                })
                 if(data.code==200){
                     this.setState({
                         detail:data.data
@@ -82,13 +94,16 @@ export class ContentDetail extends Component {
                             <MainContent detail={detail}  type={type} dataTxt={dataTxt}/>
                         </Content>
                         <Sider>
-                            <ClickRank/>
+                            <Article/>
                             <Like/>
                         </Sider>
                     </Layout>
-                    <Footer>Footer</Footer>
                 </Layout>
-                
+                <Loading
+                    fullScreen
+                    showBackDrop={true}
+                    show={this.state.showRotate}
+                />
             </div>
         );
     }

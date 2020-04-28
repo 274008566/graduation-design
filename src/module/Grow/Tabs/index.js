@@ -5,13 +5,16 @@ import './index.less'
 import {getSidebarList}from '../server'
 import TimeLines from '../timeLine'
 const {TabPane} = Tabs;
+import Loading from 'bee-loading';
+import 'bee-loading/build/Loading.css';
 
 export class GrowTabs extends Component {
     constructor(){
         super();
         this.state = {
             activeKey:"2020",
-            growList:[]
+            growList:[],
+            showRotate:false
         }
     }
 
@@ -21,8 +24,14 @@ export class GrowTabs extends Component {
 
     getSidebarList=()=>{
         let {activeKey} = this.state;
+        this.setState({
+            showRotate:true
+        })
         getSidebarList(activeKey).then(res=>{
             let data = res.data.data;
+            this.setState({
+                showRotate:false
+            })
             this.setState({
                 growList:data
             })
@@ -59,6 +68,11 @@ export class GrowTabs extends Component {
                         })
                     }
                 </Tabs>
+                <Loading
+                    fullScreen
+                    showBackDrop={true}
+                    show={this.state.showRotate}
+                />
             </div>
         );
     }

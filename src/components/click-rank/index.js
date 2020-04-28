@@ -35,7 +35,7 @@ export class ClickRank extends Component {
                                 return(
                                     <li key={index}>
                                         <i data-key={index+1}></i>
-                                        <a href={`#/home/detail/${index}`} title={item.title} target="_blank">{item.title}</a>
+                                        <a href={`#/home/detail/${item.id}?type=article`} title={item.title} target="_blank">{item.title}</a>
                                     </li>
                                 )
                             }

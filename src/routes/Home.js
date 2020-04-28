@@ -3,25 +3,34 @@ import Carousel from '../components/Carousel/index'
 import { Layout } from 'antd';
 import Recommend from '../module/Home/recommend/index'
 import NewPublish from '../module/Home/new-publish';
-import HotTag from '../components/hot-tag';
+// import HotTag from '../components/hot-tag';
 import ClickRank from '../components/click-rank'
-import { Article } from '../components/commend-article';
+import {Like} from '../components/like/index'
+import Loading from 'bee-loading';
+import 'bee-loading/build/Loading.css';
 
 import {getArticleDetail, getArticleList} from '../module/Home/server'
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header,  Sider, Content } = Layout;
 
 export class Home extends Component {
     constructor(){
         super();
         this.state = {
-            ArticleList:[]
+            ArticleList:[],
+            showRotate:false
         }
     }
 
     componentDidMount(){
+        this.setState({
+            showRotate:true
+        })
         getArticleList().then(res=>{
             let data = res.data
+            this.setState({
+                showRotate:false
+            })
             if(data.code==200){
                 this.setState({
                     ArticleList:data.data
@@ -45,13 +54,16 @@ export class Home extends Component {
                     </Content>
                     <Sider>
                         <ClickRank/>
-                        <Article/>
-                        <HotTag/>
+                        <Like/>
+                        {/* <HotTag/> */}
                     </Sider>
                 </Layout>
-                <Footer>Footer</Footer>
                 </Layout>
-                
+                <Loading
+                    fullScreen
+                    showBackDrop={true}
+                    show={this.state.showRotate}
+                />
             </div>
         );
     }

@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
 import './index.less'
 import classnames  from 'classnames';
+import {getArticleList} from '../../module/Home/server'
 
 export class Like extends Component {
     constructor(){
         super()
         this.state={
-            activekey:0
+            activekey:0,
+            LikeList:[]
         }
+    }
+
+    componentDidMount(){
+        getArticleList().then(res=>{
+            let data =res.data
+            if(data.code==200){
+                this.setState({
+                    LikeList:data.data
+                })
+            }
+        })
     }
 
     changeKey=(index)=>()=>{
@@ -16,7 +29,9 @@ export class Like extends Component {
         })
     }
     render() {
-        let {activekey}=this.state
+        let {activekey, LikeList}=this.state
+        let newLikeList = LikeList.filter(item=>{return item.sort_id == 'like' ||item.sort_id == 'new' })
+        console.log(newLikeList)
         return (
             <div className="like" >
                 <h2 className="htitle">猜你喜欢</h2>
@@ -25,11 +40,12 @@ export class Like extends Component {
                 </section>
                 <ul >
                     {
-                        [1,2,3,4,5].map((item,index)=>{
+                        newLikeList.map((item,index)=>{
                             return(
                                 <li onMouseOver={this.changeKey(index)}  className={classnames({active:activekey==index})} key={index}>
                                     <i data-key={index+1}></i>
-                                    <a href={`#/home/detail/${index}`}  title="十条设计原则教你学会如何设计网页布局!">十条设计原则教你学会如何设计网页布局!</a>
+                                    <a href={`#/home/detail/${item.id}?type=article`} target="_blank" title={item.title}>{item.title}</a>
+                                    
                                 </li>
                             )
                         })
