@@ -32,7 +32,7 @@ export class PublishCard extends Component {
     }
 
     render() {
-        let {item} = this.props
+        let {item, typeName} = this.props
         
         let {dataTxt}=this.state
         // let dataTxt = this.getTxt(item)()
@@ -56,7 +56,7 @@ export class PublishCard extends Component {
                     {/* <a href={`#/home/detail/${index}`} className="detail">[详情]</a> */}
                     <p className="autor">
                         <span>
-                            <Icon type="uf-caven" style={{color: "#f891b7"}} /><a>最新推荐</a>
+                            <Icon type="uf-caven" style={{color: "#f891b7"}} /><a>{typeName}</a>
                         </span>
                         <span>
                             <Icon type="uf-time-c-o" style={{color: "#91c8f8"}} /><a >{item.createdAt}</a>

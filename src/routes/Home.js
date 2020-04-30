@@ -9,6 +9,7 @@ import {Like} from '../components/like/index'
 import Loading from 'bee-loading';
 import 'bee-loading/build/Loading.css';
 
+
 import {getArticleDetail, getArticleList} from '../module/Home/server'
 
 const { Header,  Sider, Content } = Layout;
@@ -50,7 +51,7 @@ export class Home extends Component {
                 <Layout>
                     <Content>
                         <Recommend RecommendList={RecommendList}/>
-                        <NewPublish NewPublishList={NewPublishList}/>
+                        <NewPublish NewPublishList={NewPublishList}typeName="最新推荐"/>
                     </Content>
                     <Sider>
                         <ClickRank/>

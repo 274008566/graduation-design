@@ -131,7 +131,7 @@ body {
 }
 .study{
     margin: 0 10%;
-    overflow: auto;
+    overflow: hidden;
     min-height: calc(~"100vh - 55px");
     background: #fff;
     // padding: 10px;
@@ -228,6 +228,96 @@ body {
     background: #fff;
     // padding: 10px;
 }
-technology{
-
+.message{
+    text-align: left;
+    .rdw-editor-wrapper {
+        height: 380px !important;
+        border: 1px solid #F1F1F1 !important;
+        padding: 5px !important;
+        border-radius: 2px !important;
+        .rdw-editor-main {
+            height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+     }
+     .editor-wrapper{
+         width: 800px;
+        border: 1px solid #d1d1d1;
+        border-radius: 5px;
+        margin-bottom: 10px;
+     }
+     .ant-comment{
+        position: relative;
+        .ant-comment-inner {
+            display: -ms-flexbox;
+            display: flex;
+            padding: 16px 0;
+            .ant-comment-avatar {
+                position: relative;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                margin-right: 12px;
+                cursor: pointer;
+                .avatar-img {
+                    width: 64px;
+                    height: 64px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .ant-comment-content {
+                position: relative;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+                min-width: 1px;
+                font-size: 14px;
+                word-wrap: break-word;
+                .ant-comment-content-author {
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+                    margin-bottom: 4px;
+                    font-size: 14px;
+                    .ant-comment-content-author-time {
+                        color: #ccc;
+                    }
+                    .ant-comment-content-author-time {
+                        color: #ccc;
+                        white-space: nowrap;
+                        cursor: auto;
+                    }
+                    .ant-comment-content-author-name {
+                        color: rgba(0, 0, 0, 0.45);
+                    }
+                    .ant-comment-content-author-name {
+                        color: rgba(0,0,0,.45);
+                        font-size: 14px;
+                        -webkit-transition: color .3s;
+                        transition: color .3s;
+                    }
+                    span {
+                        height: 18px;
+                        padding-right: 8px;
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                }
+                .ant-comment-actions {
+                    margin-top: 12px;
+                    padding-left: 0;
+                    .uf{
+                        font-size: 12px!important;
+                    }
+                    li{
+                        display: inline-block;
+                        color: rgba(0,0,0,.45);
+                        font-size: 12px;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+     }
 }

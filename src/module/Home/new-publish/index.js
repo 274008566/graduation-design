@@ -11,7 +11,7 @@ export class NewPublish extends Component {
         }
     }
     render() {
-        let { NewPublishList }= this.props
+        let { NewPublishList, typeName }= this.props
         return (
             <div className="new-publish">
                 <div className="title">
@@ -20,7 +20,7 @@ export class NewPublish extends Component {
                 {
                     NewPublishList.map((item,index)=>{
                         return (
-                            <PublishCard item={item} key={index} index={index}/>
+                            <PublishCard item={item} key={index} index={index} typeName={typeName}/>
                         )
                     })
                 }
