@@ -16,7 +16,7 @@ const FlowToolbar = () => {
       {/* <Divider type="vertical" /> */}
       <ToolbarButton command="zoomIn" icon="zoom-in" text="放大" />
       <ToolbarButton command="zoomOut" icon="zoom-out" text="缩小" />
-      <ToolbarButton command="autoZoom" icon="fit-map" text="Fit Map" />
+      <ToolbarButton command="autoZoom" id='fix-size' icon="fit-map" text="Fit Map" name='fix-size' />
       <ToolbarButton command="resetZoom" icon="actual-size" text="Actual Size" />
       {/* <Divider type="vertical" /> */}
       {/* <Divider type="vertical" /> */}

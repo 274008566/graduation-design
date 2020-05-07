@@ -15,6 +15,7 @@ class FlowDemo extends Component {
                 nodes: [],
                 edges: []
               },
+              fixSize:true,
         }
     }
 
@@ -35,6 +36,23 @@ class FlowDemo extends Component {
             }
         })
     }
+
+    fixSize = () =>{
+
+    let fixSize = document.querySelector(".fix-size")
+    console.log(fixSize)
+    var evt = new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    });
+    if(this.state.fixSize){
+      fixSize.dispatchEvent(evt);
+    }
+    this.setState({
+      fixSize:false
+    })
+  }
 
     UpdateChain = (id,linkData) =>{
         UpdateLog(id,linkData).then(res=>{
@@ -59,6 +77,7 @@ class FlowDemo extends Component {
                         <Col span={16} className={styles.editorContent}>
                         <Flow className={styles.flow}
                         data= {this.state.linkData} 
+                        onAfterChange={this.fixSize}
                         />
                         </Col>
                         

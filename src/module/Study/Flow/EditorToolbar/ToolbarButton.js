@@ -8,7 +8,7 @@ import IconFont from '../IconFont/index';
 import './index.less'
 
 const ToolbarButton = props => {
-  const { command, icon, text } = props;
+  const { command, icon, text, name } = props;
 
   return (
     <Command name={command}>
@@ -17,7 +17,7 @@ const ToolbarButton = props => {
         placement="bottom"
         // overlayClassName={styles.tooltip}
       >
-        <IconFont type={`icon-${icon || command}`} />
+        <IconFont type={`icon-${icon || command}`} className={name} />
       </Tooltip>
     </Command>
   );
