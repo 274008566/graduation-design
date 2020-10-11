@@ -18,7 +18,7 @@ export class BreadCrump extends Component {
                         this.props.type == "grow" ? 
                         <Breadcrumb.Item href="#/grow">
                             <Icon type="uf-caven"></Icon>
-                            <span>成长</span>
+                            <span>时间轴</span>
                         </Breadcrumb.Item>
                         :null
                     }

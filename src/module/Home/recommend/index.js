@@ -29,7 +29,7 @@ export class Recommend extends Component {
         return (
             <div className="recommend" >
                 <div className="title">
-                    <h2>特别推荐</h2>
+                    <h2>最新文章</h2>
                 </div>
                 <Row>
                     {

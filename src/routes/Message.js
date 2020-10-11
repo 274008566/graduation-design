@@ -158,7 +158,7 @@ export class MessageDome extends Component {
                             isShowEditor ? (
                                 <div style={{ marginTop: 10 }}>
                                     <div style={{marginBottom:'30px'}}>
-                                            <span>姓名：</span>
+                                            <span>昵称：</span>
                                             <FormControl 
                                             className="demo2-input" 
                                             style={{width:'30%'}}

@@ -41,9 +41,9 @@ export default class Sidebar extends Component {
                     onToggle={this.onToggle}>
                     <Header>
                         <Brand>
-                            <div className="logo">
+                            {/* <div className="logo">
                                 <img src = {require("../../assets/images/logo3.png")}/>
-                            </div>
+                            </div> */}
                         </Brand>
                         <Toggle />
                     </Header>
@@ -56,11 +56,11 @@ export default class Sidebar extends Component {
                                 首页
                             </NavItem>
                             <NavItem href="/#/grow" eventKey={2}>
-                                成长
+                                时间轴
                             </NavItem>
-                            <NavItem href="/#/study" eventKey={3}>
+                            {/* <NavItem href="/#/study" eventKey={3}>
                                 学习
-                            </NavItem>
+                            </NavItem> */}
                             <NavItem href="/#/technology" eventKey={4}>
                                 技术分享
                             </NavItem>

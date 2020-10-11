@@ -36,7 +36,7 @@ export class Like extends Component {
             <div className="like" >
                 <h2 className="htitle">猜你喜欢</h2>
                 <section className="topnews imgscale">
-                    <a><img src={require('../../assets/images/paihang.jpg')} /><span>细节决定成败</span></a>
+                    <a><img src={require('../../assets/images/paihang.jpg')} /><span>你好~</span></a>
                 </section>
                 <ul >
                     {

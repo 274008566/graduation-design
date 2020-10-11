@@ -49,8 +49,8 @@ export class About extends Component {
                     <span className="first me">大四毕业党，软件工程专业，主修前端方向。人生就是得与失的过程，而我，却在短短的一年内得到了太多，友情、爱情、知识，最重要的是懂得了如何做人，如何去面对职场。</span>
                     <ul>
                         <li>可以通过以下方式联系到我：</li>
-                        <li>邮 箱 ：1479605026@qq.com</li>
-                        <li>Github ：https://github.com/21duxue</li>
+                        <li>邮 箱 ：274008566@qq.com</li>
+                        <li>Github ：https://github.com/274008566</li>
                     </ul>
                 </div>
                 <div className='about-content'>

@@ -15,7 +15,7 @@ export class NewPublish extends Component {
         return (
             <div className="new-publish">
                 <div className="title">
-                    <h2>最新文章</h2>
+                    <h2>特别推荐</h2>
                 </div>
                 {
                     NewPublishList.map((item,index)=>{

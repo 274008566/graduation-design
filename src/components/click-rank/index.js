@@ -24,9 +24,9 @@ export class ClickRank extends Component {
         let NewClickList = ClickList.sort((a,b)=>b.click_num-a.click_num)
         return (
             <div className="click-rank">
-                <h2 className="htitle">点击排行</h2>
+                <h2 className="htitle">热门文章</h2>
                 <section className="topnews imgscale">
-                    <a><img src={require('../../assets/images/paihang.jpg')} /><span>细节决定成败</span></a>
+                    <a><img src={require('../../assets/images/paihang.jpg')} /><span>你好~</span></a>
                 </section>
                 <ul>
                     {

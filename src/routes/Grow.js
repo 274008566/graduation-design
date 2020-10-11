@@ -8,7 +8,7 @@ export class Grow extends Component {
     render() {
         return (
             <div className="grow">
-                <Title name='成长' href="#/grow"/>
+                <Title name='时间轴' href="#/grow"/>
                 <GrowTabs/>
             </div>
         );
